@@ -30,7 +30,7 @@
   <div class="main">
     <header class="topbar"><div class="breadcrumbs">Workspace&nbsp; / &nbsp;<strong>Overview</strong></div><div class="top-actions"><span class="secure"><b>●</b>&nbsp; Demo mode · No data is stored</span><button class="login" id="login-open">Login / Register</button></div></header>
     <main class="content" id="home">
-      <section class="hero"><div><div class="eyebrow">Smarter credit decisions with artificial intelligence</div><h1>Good morning, Achal</h1><p>Understand your credit profile and explore a loan scenario.</p></div><div class="hero-actions"><a class="button secondary" href="#analysis">View insights</a><a class="button primary" href="#application">＋&nbsp; Start loan assessment</a></div></section>
+      <section class="hero"><div><div class="eyebrow">Smarter credit decisions with artificial intelligence</div><h1 id="greeting">Good morning, Achal</h1><p>Understand your credit profile and explore a loan scenario.</p></div><div class="hero-actions"><a class="button secondary" href="#analysis">View insights</a><a class="button primary" href="#application">＋&nbsp; Start loan assessment</a></div></section>
       <div class="banner"><span>✦</span><div><b>AI-assisted assessment demo.</b> This project demonstrates how financial data could be analysed to help lenders assess credit risk. Figures and recommendations are illustrative; they are not a credit decision, loan offer, or financial advice.</div></div>
       <section class="metrics" id="individual-summary" aria-label="Assessment summary">
         <div class="metric"><div class="metric-head"><span>Illustrative credit score</span><span class="metric-icon">◉</span></div><div class="metric-value" id="metric-score">785<span style="font-size:12px;color:var(--muted);font-weight:500"> / 900</span></div><div class="metric-note good">↑ Strong profile indicator</div></div>
@@ -108,6 +108,7 @@
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
 const $=id=>document.getElementById(id), money=value=>'₹'+Math.round(value).toLocaleString('en-IN'), form=$('application-form');let timer;
+function updateGreeting(){const hour=new Date().getHours(),message=hour>=5&&hour<12?'Good morning':hour<17?'Good afternoon':hour<21?'Good evening':'Good night';$('greeting').textContent=message+', Achal'}
 function toast(message){$('toast').textContent=message;$('toast').classList.add('show');clearTimeout(timer);timer=setTimeout(()=>$('toast').classList.remove('show'),2800)}
 function updateAssessment(event){if(event)event.preventDefault();if(event&&!form.reportValidity())return;
  const amount=Math.max(0,Number($('loan-amount').value)||0),income=Math.max(0,Number($('income').value)||0),emi=Math.max(0,Number($('emi').value)||0),expenses=Math.max(0,Number($('expenses').value)||0),credit=Math.max(300,Math.min(900,Number($('credit-score').value)||300)),tenure=Number($('tenure').value)||60,loanCount=Number($('existing-loans').value)||0;
@@ -184,7 +185,7 @@ $('login-open').addEventListener('click',()=>$('auth-dialog').showModal());$('au
 $('accept').addEventListener('click',()=>toast('Recommendation acknowledged in this demo. No application was submitted.'));
  $('download').addEventListener('click',()=>{const text=['AI CREDIT ASSESS — ILLUSTRATIVE DEMO REPORT','',`Loan type: ${$('loan-type').value}`,`Requested amount: ${money(Number($('loan-amount').value))}`,`Illustrative credit score: ${$('score').textContent} / 900`,`Illustrative risk: ${$('rating').textContent}`,`Default probability: ${$('score-pd').textContent}`,`Illustrative eligibility: ${$('score-eligible').textContent}`,`Suggested interest: ${$('interest').textContent}`,`Suggested tenure: ${$('recommended-tenure').textContent}`,'','Synthetic demo figures only. Not a lender decision, loan offer, financial advice, or validated credit model.'].join('\n');const blob=new Blob([text],{type:'text/plain'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='ai-credit-assessment-demo-report.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Demo report downloaded.');});
 document.querySelectorAll('.side-nav a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.side-nav a').forEach(x=>x.classList.remove('active'));a.classList.add('active')}));
-updateAssessment();
+updateGreeting();updateAssessment();
 </script>
 </body>
 </html>
