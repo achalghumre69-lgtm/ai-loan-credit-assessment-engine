@@ -106,7 +106,6 @@
 </div>
 <dialog id="auth-dialog"><form method="dialog"><h2 id="dialog-title">Welcome to AI Credit Assess</h2><p>Explore a sample account. Registration and identity verification are not connected in this demo.</p><div class="dialog-fields"><div class="field"><label for="auth-name">Name</label><input id="auth-name" placeholder="Your name"></div><div class="field"><label for="auth-contact">Email or mobile</label><input id="auth-contact" placeholder="you@example.com or mobile number"></div><div class="field"><label for="auth-password">Password</label><input id="auth-password" type="password" placeholder="Enter a demo password"></div><div class="field"><label for="auth-id">PAN / ID (optional demo field)</label><input id="auth-id" placeholder="Not verified or transmitted"></div></div><div class="dialog-actions"><button class="button secondary" value="cancel">Close</button><button class="button primary" id="auth-submit" value="submit">Continue demo</button></div></form></dialog>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script>
 const $=id=>document.getElementById(id), money=value=>'₹'+Math.round(value).toLocaleString('en-IN'), form=$('application-form');let timer;
 function toast(message){$('toast').textContent=message;$('toast').classList.add('show');clearTimeout(timer);timer=setTimeout(()=>$('toast').classList.remove('show'),2800)}
@@ -132,8 +131,8 @@ function setApplicantType(type){const isIndividual=type==='individual';$('indivi
 $('individual-tab').addEventListener('click',()=>setApplicantType('individual'));$('corporate-tab').addEventListener('click',()=>setApplicantType('corporate'));
 const corporateFields={revenue:'annual-revenue',ebitda:'ebitda',netProfit:'net-profit',assets:'total-assets',liabilities:'total-liabilities',netWorth:'net-worth',debt:'existing-debt',interest:'interest-expense',cashFlow:'cash-flow',currentAssets:'current-assets',currentLiabilities:'current-liabilities'};
 async function readPdfText(file){
- if(!window.pdfjsLib)throw new Error('The PDF reader could not load. Check your internet connection and try again.');
- pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+ let pdfjsLib;try{pdfjsLib=await import('https://cdn.jsdelivr.net/npm/pdfjs-dist@6.4.299/build/pdf.mjs')}catch{throw new Error('The PDF reader could not load. Check your internet connection and try again.')}
+ pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdn.jsdelivr.net/npm/pdfjs-dist@6.4.299/build/pdf.worker.mjs';
  const pdf=await pdfjsLib.getDocument({data:await file.arrayBuffer()}).promise,pages=[];
  for(let pageNo=1;pageNo<=pdf.numPages;pageNo++){
   const page=await pdf.getPage(pageNo),content=await page.getTextContent(),rows=[];
