@@ -25,9 +25,9 @@ The service binds to the hosting provider's `PORT` environment variable. Do not 
 
 ## 3. Connect the website
 
-Open the live website. In the assessment results, expand **Connect Jev AI for a live recommendation** and enter the deployed backend base URL. Click **Connect decision engine**. Before an assessment sends figures, check the consent box. Individual assessment sends only the financial inputs from its form. Corporate assessment sends extracted statement figures and ratios; the original PDF and company identifiers are not sent.
+The current public GitHub Pages site displays local illustrative approval / denial rules. It does not call this Jev API yet. A live connection requires deploying this backend, then explicitly configuring the frontend to use its public base URL and obtaining the applicant’s consent. Never put the TypeSafe API key in the static website.
 
-The website keeps its local demo estimate if Jev is not connected or a request fails. The Jev recommendation is a project-demo signal with a human-review fallback, not a credit decision, loan offer, or validated lending model.
+Jev responses are model recommendations only. Keep a human reviewer in the real lending process; the demo is not a validated credit model, lender decision, or loan offer.
 
 ## API
 
