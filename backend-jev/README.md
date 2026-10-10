@@ -25,7 +25,7 @@ The service binds to the hosting provider's `PORT` environment variable. Do not 
 
 ## 3. Connect the website
 
-Open the live website, paste the deployed backend's base URL into **Optional Jev AI decision signal**, and choose **Connect**. Before an assessment sends figures, check the consent box. Individual assessment sends only the financial inputs from its form. Corporate assessment sends extracted statement figures and ratios; the original PDF and company identifiers are not sent.
+Open the live website. In the assessment results, expand **Connect Jev AI for a live recommendation** and enter the deployed backend base URL. Click **Connect decision engine**. Before an assessment sends figures, check the consent box. Individual assessment sends only the financial inputs from its form. Corporate assessment sends extracted statement figures and ratios; the original PDF and company identifiers are not sent.
 
 The website keeps its local demo estimate if Jev is not connected or a request fails. The Jev recommendation is a project-demo signal with a human-review fallback, not a credit decision, loan offer, or validated lending model.
 
