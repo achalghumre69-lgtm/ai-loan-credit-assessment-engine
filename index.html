@@ -180,6 +180,11 @@ body{background-color:#070b18;background-image:radial-gradient(circle at 18% 20%
  .breadcrumbs,.secure{display:block!important}
 }
 </style>
+<style id="applicant-selector-in-hero">
+.hero-actions{align-items:flex-end}
+.hero-actions .applicant-switch{width:min(100%,400px)!important;max-width:min(100%,400px)!important;min-width:min(100%,320px);margin:0!important}
+@media(max-width:720px){.hero-actions{justify-content:center}.hero-actions .applicant-switch{width:min(100%,440px)!important;max-width:100%!important}}
+</style>
 </head>
 <body>
 <div class="layout">
@@ -200,14 +205,14 @@ body{background-color:#070b18;background-image:radial-gradient(circle at 18% 20%
   <div class="main">
     <header class="topbar"><div class="breadcrumbs">Workspace&nbsp; / &nbsp;<strong>Overview</strong></div><div class="top-actions"><span class="secure"><b>●</b>&nbsp; Private browser session · No server upload</span><button class="login" id="login-open">Login / Register</button></div></header>
     <main class="content" id="home">
-      <section class="hero"><div><div class="eyebrow">LoanDesk · transparent lending rules</div><h1>Eligibility &amp; Pricing Engine</h1><p>Check affordability, see risk-based pricing, and review the exact rules behind each result.</p></div><div class="hero-actions"><a class="button secondary" href="#analysis">View insights</a><a class="button primary" href="#application">＋&nbsp; Start loan assessment</a></div></section>
-      <section class="card applicant-switch" aria-label="Applicant type">
+      <section class="hero"><div><div class="eyebrow">LoanDesk · transparent lending rules</div><h1>Eligibility &amp; Pricing Engine</h1><p>Check affordability, see risk-based pricing, and review the exact rules behind each result.</p></div><div class="hero-actions"><section class="card applicant-switch" aria-label="Applicant type">
         <div class="applicant-switch-copy"><strong>Applicant Type</strong><span>Choose the profile to assess.</span></div>
         <div class="type-tabs" role="tablist" aria-label="Applicant Type">
           <button class="type-tab" id="individual-tab" type="button" role="tab" aria-selected="true" aria-controls="application">Individual</button>
           <button class="type-tab" id="corporate-tab" type="button" role="tab" aria-selected="false" aria-controls="corporate-application">Company / Corporate</button>
         </div>
-      </section>
+      </section></div></section>
+      
       <div class="banner"><span>✦</span><div><b>Transparent assessment prototype.</b> LoanDesk applies illustrative eligibility and pricing rules using public RBI and bank references. Results are preliminary estimates; they are not a loan offer or an actual lender decision.</div></div>
       
       <section class="metrics" id="individual-summary" aria-label="Assessment summary">
