@@ -162,6 +162,12 @@ body{background-color:#070b18;background-image:radial-gradient(circle at 18% 20%
 #pricing-breakdown,#history,#admin{margin-top:16px!important;margin-bottom:16px!important}
 @media(max-width:720px){.metrics{gap:12px!important;margin:12px 0 18px!important}.two-col{gap:14px!important}.right-col,.lower-grid,.analysis-grid,.form-grid,.pricing-figures,.score-stats,.admin-grid,.corp-kpis{gap:10px!important}}
 </style>
+<style id="hero-applicant-placement">
+.hero{align-items:center;gap:24px}
+.hero-actions{display:flex;flex:0 0 auto;max-width:100%;align-items:center}
+.hero-actions .applicant-switch{width:min(100%,400px)!important;max-width:min(100%,400px)!important;min-width:min(100%,320px);margin:0!important}
+@media(max-width:760px){.hero{align-items:stretch;flex-direction:column;gap:16px}.hero-actions{width:100%;justify-content:center}.hero-actions .applicant-switch{width:min(100%,440px)!important;max-width:100%!important}}
+</style>
 </head>
 <body>
 <div class="layout">
@@ -182,7 +188,7 @@ body{background-color:#070b18;background-image:radial-gradient(circle at 18% 20%
   <div class="main">
     <header class="topbar"><div class="breadcrumbs">Workspace&nbsp; / &nbsp;<strong>Overview</strong></div><div class="top-actions"><span class="secure"><b>●</b>&nbsp; Private browser session · No server upload</span><button class="login" id="login-open">Login / Register</button></div></header>
     <main class="content" id="home">
-      <section class="hero"><div><div class="eyebrow">LoanDesk · transparent lending rules</div><h1>Eligibility &amp; Pricing Engine</h1><p>Check affordability, see risk-based pricing, and review the exact rules behind each result.</p></div><div class="hero-actions"><a class="button secondary" href="#analysis">View insights</a><a class="button primary" href="#application">＋&nbsp; Start loan assessment</a></div></section>
+      <section class="hero"><div><div class="eyebrow">LoanDesk · transparent lending rules</div><h1>Eligibility &amp; Pricing Engine</h1><p>Check affordability, see risk-based pricing, and review the exact rules behind each result.</p></div><div class="hero-actions"></div></section>
       <div class="banner"><span>✦</span><div><b>Transparent assessment prototype.</b> LoanDesk applies illustrative eligibility and pricing rules using public RBI and bank references. Results are preliminary estimates; they are not a loan offer or an actual lender decision.</div></div>
       
       <section class="metrics" id="individual-summary" aria-label="Assessment summary">
