@@ -116,6 +116,27 @@ body{background-color:#070b18;background-image:radial-gradient(circle at 18% 20%
 }
 /* Stack assessment overview below loan application history. */
 .lower-grid{grid-template-columns:minmax(0,1fr)}
+/* Compact the three requested dashboard panels and keep them centered. */
+#pricing-breakdown,#history,#admin{width:min(100%,920px);margin-left:auto;margin-right:auto}
+#pricing-breakdown,#history,#admin{padding:17px 19px}
+#pricing-breakdown .card-head,#history .card-head,#admin .card-head{margin-bottom:12px}
+#pricing-breakdown .pricing-figures{gap:7px}
+#pricing-breakdown .pricing-figures>div{padding:9px 11px}
+#pricing-breakdown .pricing-figures span{font-size:9px}
+#pricing-breakdown .pricing-figures strong{font-size:12px}
+#pricing-breakdown .pricing-figures .pricing-total{padding:10px 12px}
+#pricing-breakdown .pricing-note{font-size:9px;line-height:1.5;margin-top:10px}
+.lower-grid{gap:13px;margin-top:15px}
+#history .history th,#history .history td{padding:8px 9px}
+#admin .admin-grid{gap:7px}
+#admin .admin-stat{padding:9px 10px}
+#admin .admin-total{padding:10px 12px}
+#admin .admin-total strong{font-size:17px}
+@media(max-width:720px){
+ #pricing-breakdown,#history,#admin{width:100%;padding:15px}
+ #pricing-breakdown .pricing-figures{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #history .history th,#history .history td{padding:7px 5px}
+}
 </style>
 </head>
 <body>
