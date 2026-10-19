@@ -146,6 +146,13 @@ body{background-color:#070b18;background-image:radial-gradient(circle at 18% 20%
 .type-tab{flex:0 0 auto;padding:7px 12px}
 @media(max-width:560px){.applicant-switch{width:min(100%,420px);padding:10px 12px;align-items:stretch;flex-direction:column;gap:8px}.type-tabs{width:100%}.type-tab{flex:1;padding:7px 9px}}
 </style>
+<style id="applicant-selector-layout-fix">
+.applicant-switch{display:flex!important;width:fit-content!important;max-width:calc(100% - 32px)!important;min-width:min(100%,320px);margin:0 auto 15px!important;padding:10px 14px!important;gap:8px!important;align-items:stretch!important;flex-direction:column!important}
+.applicant-switch-copy strong{font-size:11px!important}
+.applicant-switch-copy span{font-size:9px!important}
+.applicant-switch .type-tabs{width:auto!important;display:flex!important;gap:4px;padding:3px}
+.applicant-switch .type-tab{flex:1 1 0;padding:7px 10px;font-size:10px}
+</style>
 </head>
 <body>
 <div class="layout">
