@@ -138,13 +138,13 @@ body{background-color:#070b18;background-image:radial-gradient(circle at 18% 20%
  #history .history th,#history .history td{padding:7px 5px}
 }
 
-/* Compact Applicant Type selector, aligned with the centered dashboard panels. */
-.applicant-switch{width:min(100%,920px);margin:0 auto 15px;padding:12px 16px}
+/* Keep Applicant Type compact and centered with the dashboard panels. */
+.applicant-switch{width:fit-content;max-width:100%;margin:0 auto 15px;padding:10px 14px;gap:16px;align-items:center;flex-direction:row}
 .applicant-switch-copy strong{font-size:11px}
 .applicant-switch-copy span{font-size:9px}
-.type-tabs{padding:3px}
-.type-tab{padding:7px 12px}
-@media(max-width:720px){.applicant-switch{width:100%;padding:11px 13px}.type-tab{padding:7px 10px}}
+.type-tabs{width:auto;padding:3px}
+.type-tab{flex:0 0 auto;padding:7px 12px}
+@media(max-width:560px){.applicant-switch{width:min(100%,420px);padding:10px 12px;align-items:stretch;flex-direction:column;gap:8px}.type-tabs{width:100%}.type-tab{flex:1;padding:7px 9px}}
 </style>
 </head>
 <body>
