@@ -186,19 +186,19 @@ body{background-color:#070b18;background-image:radial-gradient(circle at 18% 20%
 @media(max-width:720px){.hero-actions{justify-content:center}.hero-actions .applicant-switch{width:min(100%,440px)!important;max-width:100%!important}}
 </style>
 <style id="theme-mode-styles">
-.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:8px 13px;border:1px solid rgba(143,166,211,.25);border-radius:999px;background:rgba(17,27,51,.9);color:#eaf1ff;font-size:12px;font-weight:700;white-space:nowrap;transition:background .18s ease,border-color .18s ease,transform .18s ease}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:7px 12px;border:1px solid rgba(143,166,211,.25);border-radius:999px;background:rgba(17,27,51,.9);color:#eaf1ff;font-size:12px;font-weight:700;white-space:nowrap;transition:background .18s ease,border-color .18s ease,transform .18s ease}
 .theme-toggle:hover{transform:translateY(-1px);border-color:rgba(54,200,238,.55);background:rgba(30,48,82,.94)}
 .theme-toggle-icon{font-size:15px;line-height:1;color:#f2bd64}
 html[data-theme="light"]{--ink:#17243b;--muted:#66758d;--line:#dfe6ef;--paper:#fff;--bg:#f4f7fb;--blue:#2458c6;--blue2:#eaf1ff;--green:#13826d;--green-bg:#e5f5f0;--amber:#a96d12;--amber-bg:#fff4df;--red:#b84752;--red-bg:#fff0f1;--shadow:0 8px 26px rgba(22,42,75,.07);color-scheme:light;background:#f4f7fb}
 html[data-theme="light"] body{color:var(--ink)!important;background:#f4f7fb!important;background-image:linear-gradient(180deg,#f8fafd 0,#f1f5fa 100%)!important}
-html[data-theme="light"] .sidebar{background:rgba(255,255,255,.97)!important;color:#17243b!important;border-color:#dfe6ef!important;box-shadow:0 8px 28px rgba(22,42,75,.07)!important}
-html[data-theme="light"] .brand,html[data-theme="light"] .profile strong{color:#17243b!important}
-html[data-theme="light"] .nav-label{color:#8794a8!important}
-html[data-theme="light"] .side-nav a{color:#52627a!important}
-html[data-theme="light"] .side-nav a:hover,html[data-theme="light"] .side-nav a.active{background:#eaf1ff!important;color:#2458c6!important;border-color:#dce7fb!important;box-shadow:inset 3px 0 #34c8df!important}
-html[data-theme="light"] .status-note{background:#f7f9fc!important;border-color:#dfe6ef!important;color:#17243b!important}
-html[data-theme="light"] .status-note span,html[data-theme="light"] .profile span{color:#66758d!important}
-html[data-theme="light"] .profile{border-color:#dfe6ef!important}
+html[data-theme="light"] .sidebar{background:#102849!important;color:#e9f0fb!important;border-color:#1f3a5c!important;box-shadow:0 8px 28px rgba(22,42,75,.12)!important}
+html[data-theme="light"] .brand,html[data-theme="light"] .profile strong{color:#f1f5fb!important}
+html[data-theme="light"] .nav-label{color:#9fb0c7!important}
+html[data-theme="light"] .side-nav a{color:#c0ccdd!important}
+html[data-theme="light"] .side-nav a:hover,html[data-theme="light"] .side-nav a.active{background:#24466f!important;color:#f3f8ff!important;border-color:#365a82!important;box-shadow:inset 3px 0 #34c8df!important}
+html[data-theme="light"] .status-note{background:#183354!important;border-color:#315477!important;color:#f1f5fb!important}
+html[data-theme="light"] .status-note span,html[data-theme="light"] .profile span{color:#b4c1d5!important}
+html[data-theme="light"] .profile{border-color:#315477!important}
 html[data-theme="light"] .topbar{background:rgba(255,255,255,.94)!important;border-color:#dfe6ef!important;box-shadow:0 6px 20px rgba(22,42,75,.06)!important}
 html[data-theme="light"] .secure{color:#66758d!important}
 html[data-theme="light"] .login{background:#fff!important;border-color:#d5deeb!important;color:#263b5b!important}
@@ -251,7 +251,7 @@ html[data-theme="light"] .toast{background:#17243b!important;color:#fff!importan
     <div class="sidebar-bottom"><div class="profile"><div class="avatar">AG</div><div class="profile-copy"><strong>Achal Ghumre</strong><span>Applicant view</span></div></div></div>
   </aside>
   <div class="main">
-    <header class="topbar"><button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true">☼</span><span class="theme-toggle-label">Light mode</span></button><div class="top-actions"><span class="secure"><b>●</b>&nbsp; Private browser session · No server upload</span><button class="login" id="login-open">Login / Register</button></div></header>
+    <header class="topbar"><div class="topbar-spacer" aria-hidden="true"></div><div class="top-actions"><span class="secure"><b>●</b>&nbsp; Private browser session · No server upload</span><button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true">☼</span><span class="theme-toggle-label">Light mode</span></button><button class="login" id="login-open">Login / Register</button></div></header>
     <main class="content" id="home">
       <section class="hero"><div><div class="eyebrow">LoanDesk · transparent lending rules</div><h1>Eligibility &amp; Pricing Engine</h1><p>Check affordability, see risk-based pricing, and review the exact rules behind each result.</p></div><div class="hero-actions"><section class="card applicant-switch" aria-label="Applicant type">
         <div class="applicant-switch-copy"><strong>Applicant Type</strong><span>Choose the profile to assess.</span></div>
