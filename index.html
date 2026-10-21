@@ -185,6 +185,54 @@ body{background-color:#070b18;background-image:radial-gradient(circle at 18% 20%
 .hero-actions .applicant-switch{width:min(100%,400px)!important;max-width:min(100%,400px)!important;min-width:min(100%,320px);margin:0!important}
 @media(max-width:720px){.hero-actions{justify-content:center}.hero-actions .applicant-switch{width:min(100%,440px)!important;max-width:100%!important}}
 </style>
+<style id="theme-mode-styles">
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:8px 13px;border:1px solid rgba(143,166,211,.25);border-radius:999px;background:rgba(17,27,51,.9);color:#eaf1ff;font-size:12px;font-weight:700;white-space:nowrap;transition:background .18s ease,border-color .18s ease,transform .18s ease}
+.theme-toggle:hover{transform:translateY(-1px);border-color:rgba(54,200,238,.55);background:rgba(30,48,82,.94)}
+.theme-toggle-icon{font-size:15px;line-height:1;color:#f2bd64}
+html[data-theme="light"]{--ink:#17243b;--muted:#66758d;--line:#dfe6ef;--paper:#fff;--bg:#f4f7fb;--blue:#2458c6;--blue2:#eaf1ff;--green:#13826d;--green-bg:#e5f5f0;--amber:#a96d12;--amber-bg:#fff4df;--red:#b84752;--red-bg:#fff0f1;--shadow:0 8px 26px rgba(22,42,75,.07);color-scheme:light;background:#f4f7fb}
+html[data-theme="light"] body{color:var(--ink)!important;background:#f4f7fb!important;background-image:linear-gradient(180deg,#f8fafd 0,#f1f5fa 100%)!important}
+html[data-theme="light"] .sidebar{background:rgba(255,255,255,.97)!important;color:#17243b!important;border-color:#dfe6ef!important;box-shadow:0 8px 28px rgba(22,42,75,.07)!important}
+html[data-theme="light"] .brand,html[data-theme="light"] .profile strong{color:#17243b!important}
+html[data-theme="light"] .nav-label{color:#8794a8!important}
+html[data-theme="light"] .side-nav a{color:#52627a!important}
+html[data-theme="light"] .side-nav a:hover,html[data-theme="light"] .side-nav a.active{background:#eaf1ff!important;color:#2458c6!important;border-color:#dce7fb!important;box-shadow:inset 3px 0 #34c8df!important}
+html[data-theme="light"] .status-note{background:#f7f9fc!important;border-color:#dfe6ef!important;color:#17243b!important}
+html[data-theme="light"] .status-note span,html[data-theme="light"] .profile span{color:#66758d!important}
+html[data-theme="light"] .profile{border-color:#dfe6ef!important}
+html[data-theme="light"] .topbar{background:rgba(255,255,255,.94)!important;border-color:#dfe6ef!important;box-shadow:0 6px 20px rgba(22,42,75,.06)!important}
+html[data-theme="light"] .secure{color:#66758d!important}
+html[data-theme="light"] .login{background:#fff!important;border-color:#d5deeb!important;color:#263b5b!important}
+html[data-theme="light"] .theme-toggle{background:#fff;border-color:#d5deeb;color:#263b5b}
+html[data-theme="light"] .theme-toggle:hover{background:#eef4ff;border-color:#b9cbed}
+html[data-theme="light"] .theme-toggle-icon{color:#53677f}
+html[data-theme="light"] .hero h1,html[data-theme="light"] .score-top h2{color:#17243b!important}
+html[data-theme="light"] .hero p{color:#66758d!important}
+html[data-theme="light"] .eyebrow{color:#087d9e!important}
+html[data-theme="light"] .metric,html[data-theme="light"] .card{background:#fff!important;border-color:#dfe6ef!important;box-shadow:0 8px 26px rgba(22,42,75,.07)!important;backdrop-filter:none}
+html[data-theme="light"] .metric:hover,html[data-theme="light"] .card:hover{border-color:#b8cbea!important;box-shadow:0 12px 30px rgba(22,42,75,.1)!important}
+html[data-theme="light"] .metric-value,html[data-theme="light"] .card-head h2,html[data-theme="light"] .card-head h3,html[data-theme="light"] .admin-stat strong,html[data-theme="light"] .score-number,html[data-theme="light"] .score-stat strong{color:#17243b!important}
+html[data-theme="light"] .metric-note,html[data-theme="light"] .card-head p,html[data-theme="light"] .field label,html[data-theme="light"] .score-max,html[data-theme="light"] .rating-sub,html[data-theme="light"] .analysis-note,html[data-theme="light"] .corp-note,html[data-theme="light"] .privacy,html[data-theme="light"] .field .hint{color:#66758d!important}
+html[data-theme="light"] .field input,html[data-theme="light"] .field select,html[data-theme="light"] .dialog-fields input,html[data-theme="light"] .statement-select,html[data-theme="light"] .upload{background:#fff!important;color:#17243b!important;border-color:#d5deeb!important}
+html[data-theme="light"] .field input::placeholder{color:#8a97aa!important}
+html[data-theme="light"] .field select option{background:#fff!important;color:#17243b!important}
+html[data-theme="light"] .type-tabs,html[data-theme="light"] .audit-filters{background:#f0f3f8!important}
+html[data-theme="light"] .type-tab{color:#52627a!important}
+html[data-theme="light"] .type-tab[aria-selected="true"]{background:#fff!important;color:#2458c6!important}
+html[data-theme="light"] .badge,html[data-theme="light"] .audit-filter{background:#f4f7fb;color:#52627a;border-color:#dfe6ef}
+html[data-theme="light"] .audit-filter.active{background:#eaf1ff;color:#2458c6;border-color:#cbdafa}
+html[data-theme="light"] .score-card,html[data-theme="light"] .decision,html[data-theme="light"] .analysis-block,html[data-theme="light"] .corp-kpi,html[data-theme="light"] .corp-xai section,html[data-theme="light"] .pricing-figures>div,html[data-theme="light"] .admin-stat,html[data-theme="light"] .audit-entry{background:#f8fafd!important;color:#17243b!important;border-color:#dfe6ef!important}
+html[data-theme="light"] .score-card:after{background:radial-gradient(circle,#e7eefb 0 1px,transparent 1.5px)!important}
+html[data-theme="light"] .corp-kpi strong,html[data-theme="light"] .pricing-figures strong,html[data-theme="light"] .analysis-block h3,html[data-theme="light"] .corp-xai h3,html[data-theme="light"] .audit-entry-head strong,html[data-theme="light"] .audit-entry summary{color:#17243b!important}
+html[data-theme="light"] .corp-xai ul,html[data-theme="light"] .audit-entry>p,html[data-theme="light"] .audit-entry li{color:#52627a!important}
+html[data-theme="light"] .pricing-figures .pricing-total,html[data-theme="light"] .admin-total{background:#edf4ff!important;border-color:#d6e4fa!important}
+html[data-theme="light"] .xai-table,html[data-theme="light"] .history{color:#17243b!important}
+html[data-theme="light"] .xai-table th,html[data-theme="light"] .history th{background:#eef2f8!important;color:#52627a!important}
+html[data-theme="light"] .xai-table td,html[data-theme="light"] .history td,html[data-theme="light"] .xai-table th,html[data-theme="light"] .history th{border-color:#dfe6ef!important}
+html[data-theme="light"] .xai-table tbody tr:hover,html[data-theme="light"] .history tbody tr:hover{background:#f3f7fc!important}
+html[data-theme="light"] .footer{color:#66758d!important}
+html[data-theme="light"] .toast{background:#17243b!important;color:#fff!important}
+</style>
+<script>try{if(localStorage.getItem('loandesk-theme-mode')==='light')document.documentElement.dataset.theme='light'}catch{}</script>
 </head>
 <body>
 <div class="layout">
@@ -203,7 +251,7 @@ body{background-color:#070b18;background-image:radial-gradient(circle at 18% 20%
     <div class="sidebar-bottom"><div class="profile"><div class="avatar">AG</div><div class="profile-copy"><strong>Achal Ghumre</strong><span>Applicant view</span></div></div></div>
   </aside>
   <div class="main">
-    <header class="topbar"><div class="breadcrumbs">Workspace&nbsp; / &nbsp;<strong>Overview</strong></div><div class="top-actions"><span class="secure"><b>●</b>&nbsp; Private browser session · No server upload</span><button class="login" id="login-open">Login / Register</button></div></header>
+    <header class="topbar"><button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true">☼</span><span class="theme-toggle-label">Light mode</span></button><div class="top-actions"><span class="secure"><b>●</b>&nbsp; Private browser session · No server upload</span><button class="login" id="login-open">Login / Register</button></div></header>
     <main class="content" id="home">
       <section class="hero"><div><div class="eyebrow">LoanDesk · transparent lending rules</div><h1>Eligibility &amp; Pricing Engine</h1><p>Check affordability, see risk-based pricing, and review the exact rules behind each result.</p></div><div class="hero-actions"><section class="card applicant-switch" aria-label="Applicant type">
         <div class="applicant-switch-copy"><strong>Applicant Type</strong><span>Choose the profile to assess.</span></div>
@@ -438,7 +486,7 @@ $('login-open').addEventListener('click',()=>$('auth-dialog').showModal());$('au
 $('accept').addEventListener('click',()=>toast('Recommendation acknowledged. No application was submitted to a lender.'));
  $('download').addEventListener('click',()=>{const text=['LOANDESK ASSESSMENT REPORT','',`Loan type: ${$('loan-type').value}`,`Requested amount: ${money(readAmount('loan-amount'))}`,`Illustrative credit score: ${$('score').textContent} / 900`,`Illustrative risk: ${$('rating').textContent}`,`Default probability: ${$('score-pd').textContent}`,`Illustrative eligibility: ${$('score-eligible').textContent}`,`Suggested interest: ${$('interest').textContent}`,`Suggested tenure: ${$('recommended-tenure').textContent}`,'','Illustrative estimates only. Not a lender decision, loan offer, financial advice, or validated credit model.'].join('\n');const blob=new Blob([text],{type:'text/plain'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='loandesk-assessment-report.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Assessment report downloaded.');});
 document.querySelectorAll('.side-nav a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.side-nav a').forEach(x=>x.classList.remove('active'));a.classList.add('active')}));
-renderAuditLog();if(location.hash==='#corporate-application'){clearCorporateAnalysis()}else{restoreIndividualAnalysis();updateAssessment()}
+const themeToggle=$('theme-toggle');function applyTheme(mode){const light=mode==='light';document.documentElement.dataset.theme=light?'light':'dark';themeToggle.setAttribute('aria-pressed',String(light));themeToggle.querySelector('.theme-toggle-icon').textContent=light?'☾':'☼';themeToggle.querySelector('.theme-toggle-label').textContent=light?'Dark mode':'Light mode';try{localStorage.setItem('loandesk-theme-mode',light?'light':'dark')}catch{}}themeToggle.addEventListener('click',()=>applyTheme(document.documentElement.dataset.theme==='light'?'dark':'light'));applyTheme(document.documentElement.dataset.theme==='light'?'light':'dark');renderAuditLog();if(location.hash==='#corporate-application'){clearCorporateAnalysis()}else{restoreIndividualAnalysis();updateAssessment()}
 </script>
 </body>
 </html>
