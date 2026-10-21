@@ -495,6 +495,11 @@ $('accept').addEventListener('click',()=>toast('Recommendation acknowledged. No 
 document.querySelectorAll('.side-nav a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.side-nav a').forEach(x=>x.classList.remove('active'));a.classList.add('active')}));
 const themeToggle=$('theme-toggle');function applyTheme(mode){const light=mode==='light';document.documentElement.dataset.theme=light?'light':'dark';themeToggle.setAttribute('aria-pressed',String(light));themeToggle.querySelector('.theme-toggle-icon').textContent=light?'☾':'☼';themeToggle.querySelector('.theme-toggle-label').textContent=light?'Dark mode':'Light mode';try{localStorage.setItem('loandesk-theme-mode',light?'light':'dark')}catch{}}themeToggle.addEventListener('click',()=>applyTheme(document.documentElement.dataset.theme==='light'?'dark':'light'));applyTheme(document.documentElement.dataset.theme==='light'?'light':'dark');renderAuditLog();if(location.hash==='#corporate-application'){clearCorporateAnalysis()}else{restoreIndividualAnalysis();updateAssessment()}
 </script>
+<style id="theme-toggle-left-final">
+html body header.topbar#loanDeskHeader,html body .main>header.topbar{position:sticky!important;inset:0 auto auto 0!important;left:0!important;right:auto!important;width:100vw!important;min-width:100vw!important;max-width:100vw!important;margin-left:0!important;padding-left:clamp(14px,3vw,34px)!important;padding-right:clamp(14px,3vw,34px)!important;display:flex!important;justify-content:space-between!important;align-items:center!important}
+html body header.topbar .theme-toggle,html body .main>header.topbar .theme-toggle{margin:0 auto 0 0!important;flex:0 0 auto!important}
+html body header.topbar .top-actions,html body .main>header.topbar .top-actions{margin-left:auto!important;flex:0 0 auto!important}
+</style>
 </body>
 </html>
 
