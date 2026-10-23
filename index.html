@@ -267,7 +267,35 @@ html[data-theme="light"] .bar i{box-shadow:none!important}
 .top-actions{flex:0 0 auto!important;margin-left:auto!important}
 @media(max-width:720px){.topbar{padding-left:14px!important;padding-right:14px!important}}
 </style>
-</head>
+<style id="page-wise-navigation-styles">
+/* Render each primary navigation item as its own page while keeping all sections in the document. */
+#home[data-page="overview"] > :not(.hero){display:none!important}
+#home[data-page="overview"]{min-height:calc(100vh - 150px);display:flex;flex-direction:column;justify-content:center}
+#home[data-page="overview"] .hero{width:100%;margin:0;align-items:center;gap:36px}
+#home[data-page="overview"] .hero>div:first-child{flex:1;min-width:0}
+#home[data-page="overview"] .hero h1{font-size:clamp(40px,6vw,76px);line-height:1.04}
+#home[data-page="overview"] .hero p{max-width:760px;font-size:16px}
+#home[data-page="overview"] .hero-actions{flex:0 0 auto}
+#home[data-page="application"] > :not(.metrics):not(.two-col):not(#pricing-breakdown){display:none!important}
+#home[data-page="application"] .metrics{margin-bottom:16px}
+#home[data-page="application"] .two-col{grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);align-items:start}
+#home[data-page="assessment"] > :not(.two-col){display:none!important}
+#home[data-page="assessment"] .two-col{grid-template-columns:minmax(0,1fr)}
+#home[data-page="assessment"] .two-col > :not(#assessment){display:none!important}
+#home[data-page="analysis"] > :not(#analysis){display:none!important}
+#home[data-page="explainability"] > :not(#explainability){display:none!important}
+#home[data-page="history"] > :not(#loandesk-audit):not(.lower-grid){display:none!important}
+#home[data-page="history"] .lower-grid{grid-template-columns:minmax(0,1fr)}
+#home[data-page="history"] .lower-grid > :not(#history){display:none!important}
+#home[data-page="history"] #history{width:100%}
+#home[data-page="admin"] > :not(.lower-grid){display:none!important}
+#home[data-page="admin"] .lower-grid{grid-template-columns:minmax(0,1fr)}
+#home[data-page="admin"] .lower-grid > :not(#admin){display:none!important}
+#home[data-page="admin"] #admin{width:100%}
+#home[data-page]{min-height:calc(100vh - 150px)}
+@media(max-width:1050px){#home[data-page="application"] .two-col{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:720px){#home[data-page="overview"]{min-height:calc(100vh - 150px)}#home[data-page="overview"] .hero{align-items:stretch;gap:20px}#home[data-page="overview"] .hero h1{font-size:clamp(34px,9vw,48px)}#home[data-page="overview"] .hero p{font-size:14px}}
+</style></head>
 <body>
 <div class="layout">
   <aside class="sidebar">
@@ -577,6 +605,8 @@ html[data-theme="light"] .analysis-note{color:#4d5d75!important}
 html[data-theme="light"] .metric-note.good{color:#087653!important}
 html[data-theme="light"] a{color:#155ca8!important;text-decoration-color:#8eaed4}
 </style>
-</body>
+<script id="page-wise-navigation-controller">
+(()=>{const page=document.querySelector('#home');if(!page)return;const routes={'':'overview','#home':'overview','#overview':'overview','#application':'application','#corporate-application':'application','#assessment':'assessment','#analysis':'analysis','#explainability':'explainability','#history':'history','#admin':'admin'};const navHash={overview:'#home',application:'#application',assessment:'#assessment',analysis:'#analysis',explainability:'#explainability',history:'#history',admin:'#admin'};const sync=()=>{const view=routes[location.hash]||'overview';page.dataset.page=view;document.querySelectorAll('.side-nav a').forEach(a=>{const active=a.getAttribute('href')===navHash[view];a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')})};window.addEventListener('hashchange',()=>{sync();window.scrollTo(0,0)});document.querySelectorAll('.side-nav a').forEach(a=>a.addEventListener('click',()=>requestAnimationFrame(()=>{sync();window.scrollTo(0,0)})));sync()})();
+</script></body>
 </html>
 
